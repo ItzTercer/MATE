@@ -1,0 +1,9 @@
+# Ejecutable generado
+main
+
+# Archivos de compilación intermedia
+*.o
+*.gch
+
+# Configuración local de VS Code
+.vscode/
