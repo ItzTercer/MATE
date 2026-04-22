@@ -22,14 +22,11 @@ Desarrollar una calculadora en lenguaje C que permita resolver operaciones matem
 ---
 
 ## 👥 Roles del equipo
-
-| Integrante | Rol |
-| :--- | :--- |
-| **Allison** | Frontend |
-| **Sibel** | Programador |
-| **Alex** | Administrador |
-| **Benjamin** | Programador |
-| **Esteban** | Programador |
+- **Allison**: Frontend
+- **Sibel**: Programador
+- **Alex**: Administrador
+- **Benjamin**: Programador
+- **Esteban**: Programador
 
 ---
 
