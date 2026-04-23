@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="logo2.png" width="300" alt="Logo MATE">
+</div>
+
 # MATE: Calculadora Dinámica para Estudiantes
 
 ## 1. Resumen de la problemática
