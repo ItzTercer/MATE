@@ -9,7 +9,7 @@ int main(void) {
 
     while (1) {
         printf("\n=================================\n");
-        printf("           Count Play\n");
+        printf("           MATE\n");
         printf("=================================\n");
         printf("1. + Sumar \n2. - Restar \n3. × Multiplicar \n4. ÷ Dividir \n5. ⌃ Exponente \n6. log Logaritmo \n7. √ Raíz \n8. ⊗ Salir \n");
         printf("Seleccione una opción: ");
