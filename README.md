@@ -77,7 +77,7 @@ Esta versión funcional corresponde al **Hito 1**.
 ## 6. Gestión del Proyecto en GitHub
 La organización y el seguimiento del desarrollo se centralizan en las herramientas de gestión de GitHub:
 
-- **Milestone Hito 1**: Registra un avance del 100% con 4 de 4 tareas cerradas satisfactoriamente.
+- **Milestone Hito 1**: Registra un avance del 100% con 6 de 6 tareas cerradas satisfactoriamente.
 - **Project Board**: El tablero "Gestión de Proyecto: CountPlay" organiza el flujo de trabajo mediante columnas *Not-Considered*, *In Progress* y *Done* .
 - **Issues**: Se han documentado y asignado tareas específicas como la modularización (#3), lógica de funciones avanzadas (#4) e investigación de frontend (#5), todas en estado finalizado.
 - **AI_USAGE.md**: Archivo incluido en la raíz para declarar el uso ético y técnico de herramientas de IA generativa durante la programación y documentación.
