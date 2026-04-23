@@ -42,7 +42,7 @@ Para descargar, compilar y ejecutar el proyecto localmente en un sistema GNU/Lin
 
 ```bash
 # 1. Clonar el repositorio localmente
-git clone https://github.com/ItzTercer/CountPlay.git
+git clone https://github.com/ItzTercer/MATE.git
 
 # 2. Acceder al directorio raíz del proyecto
 cd CountPlay
