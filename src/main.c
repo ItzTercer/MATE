@@ -9,7 +9,7 @@ int main(void) {
 
     while (1) {
         printf("\n=================================\n");
-        printf("           MATE\n");
+        printf("               MATE\n");
         printf("=================================\n");
         printf("1. + Sumar \n2. - Restar \n3. × Multiplicar \n4. ÷ Dividir \n5. ⌃ Exponente \n6. log Logaritmo \n7. √ Raíz \n8. ⊗ Salir \n");
         printf("Seleccione una opción: ");
@@ -17,29 +17,23 @@ int main(void) {
         if (scanf("%d", &opcion) != 1) {
             break;
         }
-
         if (opcion == 8) {
             break;
         }
-
         if (opcion < 1 || opcion > 8) {
             printf("Opción no válida.\n");
             continue;
         }
-
         if (opcion == 1 || opcion == 2) {
             printf("Ingrese su valor inicial (Puede usar e/pi): ");
             sim_esp = simbolos_unicos();
-
             while (1) {
                 printf("\nAcumulado: %.6lf\n", sim_esp);
                 printf("Ingrese un siguiente número (o presione 's' para salir al menú): ");
                 scanf("%s", tcad);
-
                 if (strcmp(tcad, "s") == 0) {
                     break;
                 }
-
                 double n_v;
                 if (strcmp(tcad, "e") == 0) {
                     n_v = n_e;
@@ -48,26 +42,21 @@ int main(void) {
                 } else {
                     n_v = atof(tcad);
                 }
-
                 sim_esp = (opcion == 1) ? sumar(sim_esp, n_v) : restar(sim_esp, n_v);
             }
         } 
         else if (opcion == 5) {
             printf("Inserte la base: "); 
             val1 = simbolos_unicos();
-
             printf("Inserte el exponente: "); 
             val2 = simbolos_unicos();
-
             sim_esp = potencia(val1, val2);
         } 
         else if (opcion == 6) {
             printf("Inserte la base: "); 
             val1 = simbolos_unicos();
-
             printf("Inserte argumento: "); 
             val2 = simbolos_unicos();
-
             if (val1 > 0 && val1 != 1 && val2 > 0) {
                 sim_esp = logaritmo(val1, val2);
             } else { 
@@ -78,19 +67,26 @@ int main(void) {
         else if (opcion == 7) {
             printf("Inserte el índice de la raíz: "); 
             val1 = simbolos_unicos();
-
-            printf("Radical (lo que esta dentro de la raíz): "); 
+            if (val1 < 0) {
+                printf("\nEl índice no puede ser negativo\n");
+                continue;
+            }
+            printf("Inserte Radicando (lo que esta dentro de la raíz): "); 
             val2 = simbolos_unicos();
-
+            if (val2 < 0) {
+                int val1_int = (int)val1;
+                if (val1 != val1_int || val1_int % 2 == 0) {
+                    printf("Error: Radicando negativo requiere índice entero impar.\n");
+                    continue;
+                }
+            }
             sim_esp = raiz_n(val1, val2);
         } 
         else {
             printf("Ingrese un primer número: "); 
             val1 = simbolos_unicos();
-
             printf("Ingrese un segundo número: "); 
             val2 = simbolos_unicos();
-
             if (opcion == 3) {
                 sim_esp = multiplicar(val1, val2);
             } else if (val2 != 0) {
@@ -100,9 +96,7 @@ int main(void) {
                 continue; 
             }
         }
-
         printf("\nResultado final: %.6lf\n", sim_esp);
     }
-
     return 0;
 }
