@@ -60,15 +60,15 @@ int main(void) {
             if (val1 > 0 && val1 != 1 && val2 > 0) {
                 sim_esp = logaritmo(val1, val2);
             } else { 
-                printf("Error: Dominio logaritmo inválido (Base > 0 y distinta de 1, Argumento > 0)\n"); 
+                printf("\nError: Dominio logaritmo inválido (Base > 0 y distinta de 1, Argumento > 0)\n"); 
                 continue; 
             }
         } 
         else if (opcion == 7) {
             printf("Inserte el índice de la raíz: "); 
             val1 = simbolos_unicos();
-            if (val1 < 0) {
-                printf("\nEl índice no puede ser negativo\n");
+            if (val1<=0) {
+                printf("\nEl índice no puede ser negativo o cero\n");
                 continue;
             }
             printf("Inserte Radicando (lo que esta dentro de la raíz): "); 
@@ -76,7 +76,7 @@ int main(void) {
             if (val2 < 0) {
                 int val1_int = (int)val1;
                 if (val1 != val1_int || val1_int % 2 == 0) {
-                    printf("Error: Radicando negativo requiere índice entero impar.\n");
+                    printf("\nError: Radicando negativo requiere índice entero impar.\n");
                     continue;
                 }
             }
