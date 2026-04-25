@@ -45,13 +45,13 @@ Para descargar, compilar y ejecutar el proyecto localmente en un sistema GNU/Lin
 git clone https://github.com/ItzTercer/MATE.git
 
 # 2. Acceder al directorio raíz del proyecto
-cd CountPlay
+cd MATE
 
 # 3. Compilar el código fuente enlazando la biblioteca matemática (NO OLVIDAR "-lm" DEL FINAL)
-gcc src/main.c src/calc.c -o countplay -lm
+gcc src/main.c src/calc.c -o mate -lm
 
 # 4. Iniciar el programa
-./countplay
+./mate
 ```
 ## 5. Funcionalidades Implementadas y Pruebas
 Esta versión funcional corresponde al **Hito 1**.
