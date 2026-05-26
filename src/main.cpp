@@ -8,20 +8,26 @@ int main(void) {
     char texto_ingresado[32];
 
     while (1) {
-        printf("\n=================================\n");
-        printf("               MATE\n");
-        printf("=================================\n");
-        printf("1. + Sumar \n2. - Restar \n3. × Multiplicar \n4. ÷ Dividir \n5. ⌃ Exponente \n6. log Logaritmo \n7. √ Raíz \n8. ⊗ Salir \n");
-        printf("Seleccione una opción: ");
+        std::cout << "\n=================================\n"
+                    "               MATE\n"
+                    "=================================\n"
+                    "1. + Sumar \n"
+                    "2. - Restar \n"
+                    "3. × Multiplicar \n"
+                    "4. ÷ Dividir \n"
+                    "5. ⌃ Exponente \n"
+                    "6. log Logaritmo \n"
+                    "7. √ Raíz \n"
+                    "8. ⊗ Salir \n";
         
-        if (scanf("%d", &opcion) != 1) {
+        if (!(std::cin >> opcion)) {
             break;
         }
         if (opcion == OPCION_SALIR) {
             break;
         }
         if (opcion < OPCION_SUMA || opcion > OPCION_SALIR) {
-            printf("Opción no válida.\n");
+            std::cout << "Opción no válida.\n";
             continue;
         }
 
@@ -32,12 +38,12 @@ int main(void) {
                ------------------------------------------- */
             case OPCION_SUMA:
             case OPCION_RESTA:
-                printf("Ingrese su valor inicial (Puede usar e/pi): ");
+                std::cout << "Ingrese su valor inicial (Puede usar e/pi): ";
                 resultado_actual = simbolos_unicos();
                 
                 while (1) {
-                    printf("\nAcumulado: %.6lf\n", resultado_actual);
-                    printf("Ingrese un siguiente número (o presione 's' para salir al menú): ");
+                    printf("\nAcumulado: %.6lf\n", resultado_actual); 
+                    std::cout << "Ingrese un siguiente número (o presione 's' para salir al menú): ";
                     scanf("%s", texto_ingresado);
                     
                     if (strcmp(texto_ingresado, "s") == 0) {
@@ -66,9 +72,9 @@ int main(void) {
                OPERACIÓN DE EXPONENTE
                ------------------------------------------- */
             case OPCION_EXPONENTE:
-                printf("Inserte la base: "); 
+                std::cout << "Inserte la base: ";
                 val1 = simbolos_unicos();
-                printf("Inserte el exponente: "); 
+                std::cout << "Inserte el exponente: ";
                 val2 = simbolos_unicos();
                 resultado_actual = potencia(val1, val2);
                 break;
@@ -77,14 +83,14 @@ int main(void) {
                OPERACIÓN DE LOGARITMO
                ------------------------------------------- */
             case OPCION_LOGARITMO:
-                printf("Inserte la base: "); 
+                std::cout << "Inserte la base: "; 
                 val1 = simbolos_unicos();
-                printf("Inserte argumento: "); 
+                std::cout << "Inserte argumento: "; 
                 val2 = simbolos_unicos();
                 if (val1 > 0 && val1 != 1 && val2 > 0) {
                     resultado_actual = logaritmo(val1, val2);
                 } else { 
-                    printf("\nError: Dominio logaritmo inválido (Base > 0 y distinta de 1, Argumento > 0)\n"); 
+                    std::cout << "\nError: Dominio logaritmo inválido (Base > 0 y distinta de 1, Argumento > 0)\n"; 
                     continue; 
                 }
                 break;
@@ -93,18 +99,18 @@ int main(void) {
                OPERACIÓN DE RAÍZ
                ------------------------------------------- */
             case OPCION_RAIZ:
-                printf("Inserte el índice de la raíz: "); 
+                std::cout << "Inserte el índice de la raíz: "; 
                 val1 = simbolos_unicos();
                 if (val1 <= 0) {
-                    printf("\nEl índice no puede ser negativo o cero\n");
+                    std::cout << "\nEl índice no puede ser negativo o cero\n";
                     continue;
                 }
-                printf("Inserte Radicando (lo que esta dentro de la raíz): "); 
+                std::cout << "Inserte Radicando (lo que esta dentro de la raíz): "; 
                 val2 = simbolos_unicos();
                 if (val2 < 0) {
                     int val1_int = (int)val1;
                     if (val1 != val1_int || val1_int % 2 == 0) {
-                        printf("\nError: Radicando negativo requiere índice entero impar.\n");
+                        std::cout << "\nError: Radicando negativo requiere índice entero impar.\n";
                         continue;
                     }
                 }
@@ -116,9 +122,9 @@ int main(void) {
                ------------------------------------------- */
             case OPCION_MULTIPLICAR:
             case OPCION_DIVIDIR:
-                printf("Ingrese un primer número: "); 
+                std::cout << "Ingrese un primer número: "; 
                 val1 = simbolos_unicos();
-                printf("Ingrese un segundo número: "); 
+                std::cout << "Ingrese un segundo número: "; 
                 val2 = simbolos_unicos();
                 
                 if (opcion == OPCION_MULTIPLICAR) {
@@ -127,7 +133,7 @@ int main(void) {
                     if (val2 != 0) {
                         resultado_actual = dividir(val1, val2);
                     } else { 
-                        printf("Error: División por cero.\n"); 
+                        std::cout << "Error: División por cero.\n"; 
                         continue; 
                     }
                 }
@@ -144,3 +150,4 @@ int main(void) {
     }
     return 0;
 }
+

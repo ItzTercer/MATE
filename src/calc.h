@@ -1,9 +1,12 @@
 #ifndef CALC_H
 #define CALC_H
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+
+//solo cambian librerias.
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <cmath>
+#include <iostream>
 
 #define n_e 2.71828182845904523536
 #define n_pi 3.14159265358979323846

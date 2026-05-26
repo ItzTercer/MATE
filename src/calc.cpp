@@ -28,7 +28,7 @@ double raiz_n(double indice, double radicando) {
 
 double simbolos_unicos() {
     char entrada_usuario[32];
-    if (scanf("%s", entrada_usuario) != 1) {
+    if (!(std::cin >> entrada_usuario)) {
         return 0;
     } 
     if (strcmp(entrada_usuario, "e") == 0) {
@@ -41,7 +41,7 @@ double simbolos_unicos() {
 }
 
 void verificar_magnitud(double valor) {
-    if (isinf(valor)) {
-        printf("\n[ADVERTENCIA] Magnitud máxima excedida. El resultado tiende a Infinito.\n");
+    if (std::isinf(valor)) {
+        std::cout << "\n[ADVERTENCIA] Magnitud máxima excedida. El resultado tiende a Infinito.\n";
     }
 }
