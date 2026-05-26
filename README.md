@@ -90,7 +90,7 @@ La organización y el seguimiento del desarrollo se centralizan en las herramien
 
 ### Objetivos Hito 2
 - **Resolución de Bugs**: Corregir la falla de vinculación de señales en botones de la interfaz (Issue #6 en rama `front-end-test`).
-- **Desarrollo de GUI**: Transicionar el sistema desde la consola hacia una Interfaz Gráfica de Usuario (GUI) funcional.
+- **Desarrollo de GUI**: Transicionar el sistema desde la consola hacia una Interfaz Gráfica de Usuario (GUI) funcional, migrando el lenguaje de C a C++ (ej. utilizando el framework Qt).
 - **Motor Gráfico**: Implementar la lógica necesaria para la representación visual de funciones matemáticas.
 - **Ampliar la Resolucion de problemas**: Implementar la lógica necesaria para la resolucion de ecuaciones con variables a despejar e implementación de mas funciones matematicas necesarias en la etapa escolar de enseñanza media.
 

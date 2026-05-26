@@ -27,15 +27,21 @@ double raiz_n(double indice, double radicando) {
 }
 
 double simbolos_unicos() {
-    char cad1[32];
-    if (scanf("%s", cad1) != 1) {
+    char entrada_usuario[32];
+    if (scanf("%s", entrada_usuario) != 1) {
         return 0;
     } 
-    if (strcmp(cad1, "e") == 0) {
+    if (strcmp(entrada_usuario, "e") == 0) {
         return n_e;
     }
-    if (strcmp(cad1, "pi") == 0) {
+    if (strcmp(entrada_usuario, "pi") == 0) {
         return n_pi;
     }
-    return atof(cad1);
+    return atof(entrada_usuario);
+}
+
+void verificar_magnitud(double valor) {
+    if (isinf(valor)) {
+        printf("\n[ADVERTENCIA] Magnitud máxima excedida. El resultado tiende a Infinito.\n");
+    }
 }
