@@ -7,6 +7,7 @@
 #include <cstring>
 #include <cmath>
 #include <iostream>
+#include <iomanip>
 
 #define n_e 2.71828182845904523536
 #define n_pi 3.14159265358979323846

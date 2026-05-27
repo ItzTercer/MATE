@@ -42,10 +42,10 @@ int main(void) {
                 resultado_actual = simbolos_unicos();
                 
                 while (1) {
-                    printf("\nAcumulado: %.6lf\n", resultado_actual); 
+                    std::cout << "\nAcumulado: " << std::fixed << std::setprecision(6) << resultado_actual << "\n";
                     std::cout << "Ingrese un siguiente número (o presione 's' para salir al menú): ";
-                    scanf("%s", texto_ingresado);
-                    
+                    std::cin >> texto_ingresado;
+
                     if (strcmp(texto_ingresado, "s") == 0) {
                         break;
                     }
@@ -145,7 +145,7 @@ int main(void) {
            ------------------------------------------- */
         if (opcion != OPCION_SUMA && opcion != OPCION_RESTA) {
             verificar_magnitud(resultado_actual);
-            printf("\nResultado final: %.6lf\n", resultado_actual);
+            std::cout << "\nResultado: " << std::fixed << std::setprecision(6) << resultado_actual << "\n";
         }
     }
     return 0;
