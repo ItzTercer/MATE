@@ -1,34 +1,51 @@
-#ifndef CALC_H
-#define CALC_H
+#ifndef definiciones_calc
+#define definiciones_calc
 
-//solo cambian librerias.
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <cmath>
+//Librerias
 #include <iostream>
+#include <cmath>
+#include <string>
 #include <iomanip>
 
-#define n_e 2.71828182845904523536
-#define n_pi 3.14159265358979323846
+//Constantes
+#define constante_e 2.71828182845904523536
+#define constante_pi 3.14159265358979323846
 
-#define OPCION_SUMA 1
-#define OPCION_RESTA 2
-#define OPCION_MULTIPLICAR 3
-#define OPCION_DIVIDIR 4
-#define OPCION_EXPONENTE 5
-#define OPCION_LOGARITMO 6
-#define OPCION_RAIZ 7
-#define OPCION_SALIR 8
+//Opciones
+#define eleccion_suma 1
+#define eleccion_resta 2
+#define eleccion_multiplicar 3
+#define eleccion_dividir 4
+#define eleccion_potencia 5
+#define eleccion_logaritmo 6
+#define eleccion_raiz 7
+#define eleccion_salir 8
 
-double sumar(double a, double b);
-double restar(double a, double b);
-double multiplicar(double a, double b);
-double dividir(double a, double b);
-double potencia(double base, double exponente);
-double logaritmo(double base, double argumento);
-double raiz_n(double indice, double radicando);
-double simbolos_unicos();
-void verificar_magnitud(double valor);
+//Clases
+class calc_mate {
+private:
+    //Variables Temporales
+    double resultado_actual;
+    double primer_valor;
+    double segundo_valor;
+
+    //Herramientas
+    double verificador_constantes();
+    void verificador_infinito(double verificador);
+
+public:
+    calc_mate();
+    ~calc_mate();
+    
+    //Matematicas
+    void iniciar();
+    double sumar(double a, double b);
+    double restar(double a, double b);
+    double multiplicar(double a, double b);
+    double dividir(double a, double b);
+    double potencia(double base, double exponente);
+    double logaritmo(double base, double argumento);
+    double raiz_n(double indice, double radicando);
+};
 
 #endif
