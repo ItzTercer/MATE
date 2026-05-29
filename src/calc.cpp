@@ -66,6 +66,6 @@ double calc_mate::verificador_constantes() {
 //Verificador de infinito
 void calc_mate::verificador_infinito(double verificador) {
     if (std::isinf(verificador)) {
-        std::cout << "\n[ADVERTENCIA] Magnitud máxima excedida. El resultado tiende a Infinito.\n";
+        std::cout << "\n\033[1m\033[38;5;220m[ADVERTENCIA] Magnitud máxima excedida. El resultado tiende a Infinito.\033[0m\n";
     }
 }

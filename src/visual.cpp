@@ -1,22 +1,26 @@
 #include "calc.h"
 
+
 void calc_mate::iniciar() {
     int opcion;
     std::string cadena;
 
     while (true) {
-            std::cout << "\n\033[1m\033[38;5;18m====\033[38;5;19m====\033[38;5;20m====\033[38;5;21m=========\033[38;5;20m====\033[38;5;19m====\033[38;5;18m====\033[0m\n"
-                    "               \033[1m\033[38;5;19mMATE\033[0m\n"            
-                    "\033[1m\033[38;5;18m====\033[38;5;19m====\033[38;5;20m====\033[38;5;21m=========\033[38;5;20m====\033[38;5;19m====\033[38;5;18m====\033[0m\n"
-                    "\033[38;5;18m1. \033[38;5;19m+ \033[38;5;20mSumar\n"
-                    "\033[38;5;18m2. \033[38;5;19m- \033[38;5;20mRestar \n"
-                    "\033[38;5;18m3. \033[38;5;19m× \033[38;5;20mMultiplicar \n"
-                    "\033[38;5;18m4. \033[38;5;19m÷ \033[38;5;20mDividir     \n"
-                    "\033[38;5;18m5. \033[38;5;19m⌃ \033[38;5;20mExponente   \n"
-                    "\033[38;5;18m6. \033[38;5;19mlog \033[38;5;20mLogaritmo \n"
-                    "\033[38;5;18m7. \033[38;5;19m√ \033[38;5;20mRaíz        \n"
-                    "\033[38;5;18m8. \033[38;5;160m⊗ Salir       \033[0m\n";
+        //menu
+        std::cout << "\n\033[1m\033[38;5;18m====\033[38;5;19m====\033[38;5;20m====\033[38;5;21m=======\033[38;5;20m====\033[38;5;19m====\033[38;5;18m=====\033[0m\n"
+                    "  \033[1m\033[38;5;45m■══════════ MATE ══════════■\033[0m\n"            
+                    "\033[1m\033[38;5;18m====\033[38;5;19m====\033[38;5;20m====\033[38;5;21m=======\033[38;5;20m====\033[38;5;19m====\033[38;5;18m=====\033[0m\n"
+                    "\033[38;5;69m1. \033[38;5;69m+ \033[38;5;69mSumar\n"
+                    "\033[38;5;69m2. \033[38;5;69m- \033[38;5;69mRestar \n"
+                    "\033[38;5;69m3. \033[38;5;69m× \033[38;5;69mMultiplicar \n"
+                    "\033[38;5;69m4. \033[38;5;69m÷ \033[38;5;69mDividir     \n"
+                    "\033[38;5;69m5. \033[38;5;69m⌃ \033[38;5;69mExponente   \n"
+                    "\033[38;5;69m6. \033[38;5;69mlog \033[38;5;69mLogaritmo \n"
+                    "\033[38;5;69m7. \033[38;5;69m√ \033[38;5;69mRaíz        \n"
+                    "\033[38;5;220m8. \033[38;5;220m≡ Formulario y Aprendizaje \n"
+                    "\033[38;5;9m9. \033[38;5;9m⊗ Salir       \033[0m\n";
         
+        //entrada
         if (!(std::cin >> opcion)) {
             break;
         }
@@ -24,26 +28,30 @@ void calc_mate::iniciar() {
             break;
         }
         if (opcion < eleccion_suma || opcion > eleccion_salir) {
-            std::cout << "Opción no válida.\n";
+            std::cout << "\n\033[38;5;124mOpción no válida.\033[0m\n";
             continue;
         }
 
+        //casos
         switch (opcion) {
-            //Suma y Resta
+            
+            //suma y resta
             case eleccion_suma:
             case eleccion_resta:
                 std::cout << "Ingrese su valor inicial (Puede usar e/pi): ";
                 resultado_actual = verificador_constantes();
-                
                 while (true) {
-                    std::cout << "\nAcumulado: " << std::fixed << std::setprecision(6) << resultado_actual << "\n";
-                    std::cout << "Ingrese un siguiente número (o presione 's' para salir al menú): ";
+                    std::cout << "\nAcumulado: ";
+                    if (std::isinf(resultado_actual)) {
+                        std::cout << "\033[1m\033[38;5;82m" << "\u221E Infinito" << "\033[0m\n";
+                    } else {
+                        std::cout << "\033[1m\033[38;5;82m" << std::fixed << std::setprecision(6) << resultado_actual << "\033[0m\n";
+                    }
+                    std::cout << "Ingrese un siguiente número (o presione '\033[1m\033[38;5;124ms\033[0m' para salir al menú): ";
                     std::cin >> cadena;
-
                     if (cadena == "s") {
                         break;
                     }
-                    
                     double nuevo_valor;
                     if (cadena == "e") {
                         nuevo_valor = constante_e;
@@ -52,7 +60,6 @@ void calc_mate::iniciar() {
                     } else {
                         nuevo_valor = std::stod(cadena);
                     }
-                    
                     if (opcion == eleccion_suma) {
                         resultado_actual = sumar(resultado_actual, nuevo_valor);
                     } else {
@@ -62,7 +69,7 @@ void calc_mate::iniciar() {
                 }
                 break;
             
-            //Potencia    
+            //potencia
             case eleccion_potencia:
                 std::cout << "Inserte la base: ";
                 primer_valor = verificador_constantes();
@@ -71,7 +78,7 @@ void calc_mate::iniciar() {
                 resultado_actual = potencia(primer_valor, segundo_valor);
                 break;
             
-            //Logaritmo
+            //log
             case eleccion_logaritmo:
                 std::cout << "Inserte la base: "; 
                 primer_valor = verificador_constantes();
@@ -80,17 +87,17 @@ void calc_mate::iniciar() {
                 if (primer_valor > 0 && primer_valor != 1 && segundo_valor > 0) {
                     resultado_actual = logaritmo(primer_valor, segundo_valor);
                 } else { 
-                    std::cout << "\nError: Dominio logaritmo inválido (Base > 0 y distinta de 1, Argumento > 0)\n"; 
+                    std::cout << "\n\033[38;5;124mError: Dominio logaritmo inválido (Base > 0 y distinta de 1, Argumento > 0)\033[0m\n"; 
                     continue; 
                 }
                 break;
 
-            //Raiz
+            //raiz
             case eleccion_raiz:
                 std::cout << "Inserte el índice de la raíz: "; 
                 primer_valor = verificador_constantes();
                 if (primer_valor <= 0) {
-                    std::cout << "\nEl índice no puede ser negativo o cero\n";
+                    std::cout << "\n\033[38;5;124mEl índice no puede ser negativo o cero\033[0m\n";
                     continue;
                 }
                 std::cout << "Inserte Radicando (lo que esta dentro de la raíz): "; 
@@ -98,14 +105,14 @@ void calc_mate::iniciar() {
                 if (segundo_valor < 0) {
                     int parte_entera_indice = (int)primer_valor;
                     if (primer_valor != parte_entera_indice || parte_entera_indice % 2 == 0) {
-                        std::cout << "\nError: Radicando negativo requiere índice entero impar.\n";
+                        std::cout << "\n\033[38;5;124mError: Radicando negativo requiere índice entero impar.\033[0m\n";
                         continue;
                     }
                 }
                 resultado_actual = raiz_n(primer_valor, segundo_valor);
                 break;
 
-            //Multiplicar y Dividir
+            //multi y divición
             case eleccion_multiplicar:
             case eleccion_dividir:
                 std::cout << "Ingrese un primer número: "; 
@@ -119,17 +126,26 @@ void calc_mate::iniciar() {
                     if (segundo_valor != 0) {
                         resultado_actual = dividir(primer_valor, segundo_valor);
                     } else { 
-                        std::cout << "Error: División por cero.\n"; 
+                        std::cout << "\033[38;5;124mError: División por cero.\033[0m\n"; 
                         continue; 
                     }
                 }
                 break;
+
+            //Hito 3
+            case eleccion_formulario:
+                formulario.formulario_visual();
+                break;
         }
 
-        //Infinito
-        if (opcion != eleccion_suma && opcion != eleccion_resta) {
+        if (opcion != eleccion_suma && opcion != eleccion_resta && opcion != eleccion_formulario) {
             verificador_infinito(resultado_actual);
-            std::cout << "\nResultados: " << std::fixed << std::setprecision(6) << resultado_actual << "\n";
+            std::cout << "\nResultados: ";
+            if (std::isinf(resultado_actual)) {
+                std::cout << "\033[1m\033[38;5;82m" << "\u221E Infinito" << "\033[0m\n";
+            } else {
+                std::cout << "\033[1m\033[38;5;82m" << std::fixed << std::setprecision(6) << resultado_actual << "\033[0m\n";
+            }
         }
     }
 }

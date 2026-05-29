@@ -6,6 +6,7 @@
 #include <cmath>
 #include <string>
 #include <iomanip>
+#include "formulario.h"
 
 //Constantes
 #define constante_e 2.71828182845904523536
@@ -19,15 +20,19 @@
 #define eleccion_potencia 5
 #define eleccion_logaritmo 6
 #define eleccion_raiz 7
-#define eleccion_salir 8
+#define eleccion_formulario 8
+#define eleccion_salir 9
 
-//Clases
+//Class
 class calc_mate {
 private:
     //Variables Temporales
     double resultado_actual;
     double primer_valor;
     double segundo_valor;
+
+    //Composición
+    formulario_aprendizaje formulario;
 
     //Herramientas
     double verificador_constantes();
