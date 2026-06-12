@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/fonts"/>
+    <qresource prefix="/icons">
+        <file>resources/suncat.jpg</file>
+    </qresource>
+</RCC>
