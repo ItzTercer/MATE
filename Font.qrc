@@ -1,6 +1,14 @@
 <RCC>
-    <qresource prefix="/fonts"/>
+    <qresource prefix="/fonts">
+        <file>resources/upheavtt.ttf</file>
+    </qresource>
     <qresource prefix="/icons">
         <file>resources/suncat.jpg</file>
+        <file>resources/logomate.png</file>
+    </qresource>
+    <qresource prefix="/Ecuaciones">
+        <file>resources/binomioalcuadrado.png</file>
+        <file>resources/sumapordiferencia.png</file>
+        <file>resources/cubodebinomio.png</file>
     </qresource>
 </RCC>

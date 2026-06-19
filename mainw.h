@@ -33,6 +33,10 @@ private slots:
     void delPressed();
     void negatePressed();
 
+    void btnCalc_Pressed();
+    void btnForm_Pressed();
+    void actualizarBotonesMenu();
+
 private:
     Ui::MainW *ui;
 
