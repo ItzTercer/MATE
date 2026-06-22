@@ -1,39 +1,9 @@
-# 🧮 Calculadora Dinámica para Estudiantes
+<div align="center">
+  <img src="logo2.png" width="300" alt="Logo MATE">
+</div>
 
-## 📌 Resumen de la problemática
-Actualmente, muchos estudiantes de colegios presentan dificultades para comprender conceptos matemáticos de forma visual y práctica. Las calculadoras tradicionales solo entregan resultados, pero no ayudan a entender el proceso ni a visualizar funciones.
+# MATE - Rama: front-end-test
 
-Este proyecto busca desarrollar una **calculadora dinámica en C**, que permita realizar operaciones matemáticas y **visualizar funciones de forma simple en consola**, apoyando el aprendizaje de los estudiantes.
+Esta rama está destinada exclusivamente a las pruebas de interfaz y desarrollo del entorno gráfico (Frontend).
 
----
-
-## 🎯 Objetivo general
-Desarrollar una calculadora en lenguaje C que permita resolver operaciones matemáticas básicas y graficar funciones simples, con el fin de apoyar el aprendizaje en estudiantes de enseñanza escolar.
-
----
-
-## 🎯 Objetivos específicos
-- Implementar operaciones matemáticas básicas (suma, resta, multiplicación y división).
-- Permitir el ingreso de funciones matemáticas simples.
-- Representar gráficamente funciones en consola.
-- Diseñar un programa fácil de usar mediante menú interactivo.
-- Validar entradas del usuario.
-
----
-
-## 👥 Roles del equipo
-- **Allison**: Frontend
-- **Sibel**: Programador
-- **Alex**: Administrador
-- **Benjamin**: Programador
-- **Esteban**: Programador
-
----
-
-## ⚙️ Funcionalidades implementadas
-
-### 1. Operaciones básicas
-- Suma
-- Resta
-- Multiplicación
-- División (con validación de división por cero)
+La información y el código presentes en esta rama son de carácter experimental y pueden diferir del estado de producción. Para consultar la documentación oficial, objetivos, roles y versiones estables, diríjase a la rama `main`.
