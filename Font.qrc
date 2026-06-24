@@ -5,6 +5,7 @@
     <qresource prefix="/icons">
         <file>resources/suncat.jpg</file>
         <file>resources/logomate.png</file>
+        <file>resources/github-white-icon.png</file>
     </qresource>
     <qresource prefix="/Ecuaciones">
         <file>resources/binomioalcuadrado.png</file>

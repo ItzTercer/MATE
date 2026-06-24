@@ -1,10 +1,6 @@
 #include "mainw.h"
 #include "./ui_mainw.h"
 
-#include <QDesktopServices>
-#include <QUrl>
-#include <cmath>
-
 MainW::MainW(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainW)
@@ -17,6 +13,7 @@ MainW::MainW(QWidget *parent)
 
     ui->btnCalc->setToolTip("Calculadora");
     ui->btnForm->setToolTip("Formulario");
+    ui->btnGit->setToolTip("Revisa nuestro código de Git!! :D");
 
     // Botones números
     QPushButton* botonesn[10] = {
@@ -44,6 +41,7 @@ MainW::MainW(QWidget *parent)
     connect(ui->btnCE,   &QPushButton::clicked, this, &MainW::cePressed);
     connect(ui->btnDel,  &QPushButton::clicked, this, &MainW::delPressed);
     connect(ui->btnNeg,  &QPushButton::clicked, this, &MainW::negatePressed);
+    connect(ui->btnDot, &QPushButton::clicked, this, &MainW::dotPressed);
 
     connect(ui->btnSun, &QPushButton::clicked, this, []() {
         QDesktopServices::openUrl(QUrl("https://youtu.be/um0ETkJABmI?si=mZgDiMidKMGh4upX"));
@@ -52,6 +50,10 @@ MainW::MainW(QWidget *parent)
     // sidebar
     connect(ui->btnCalc, &QPushButton::clicked, this, &MainW::btnCalc_Pressed);
     connect(ui->btnForm, &QPushButton::clicked, this, &MainW::btnForm_Pressed);
+    connect(ui->btnFrac, &QPushButton::clicked, this, &MainW::btnFrac_Pressed);
+    connect(ui->btnGit, &QPushButton::clicked, this, []() {
+        QDesktopServices::openUrl(QUrl("https://github.com/ItzTercer/MATE"));
+    });
 
     // Botones con stackedWidget
     connect(ui->stackedWidget, &QStackedWidget::currentChanged,
@@ -60,6 +62,10 @@ MainW::MainW(QWidget *parent)
     // Página inicial
     ui->stackedWidget->setCurrentWidget(ui->pageCalc);
     actualizarBotonesMenu();
+
+    //Graficadora de fracciones
+    connect(ui->btnGraficarF, &QPushButton::clicked,
+            this, &MainW::graficarFraccion);
 }
 
 // Funciones :D
@@ -82,6 +88,25 @@ void MainW::numPressed()
         } else {
             ui->display2->setText(ui->display2->text() + boton->text());
         }
+    }
+}
+
+void MainW::dotPressed()
+{
+    if (ui->display2->text() == "Error") {
+        ui->display2->setText("0");
+    }
+
+    QString texto = ui->display2->text();
+
+    if (esperandoNuevoNumero) {
+        ui->display2->setText("0.");
+        esperandoNuevoNumero = false;
+        return;
+    }
+
+    if (!texto.contains(".")) {
+        ui->display2->setText(texto + ".");
     }
 }
 
@@ -270,6 +295,14 @@ void MainW::btnForm_Pressed()
     actualizarBotonesMenu();
 }
 
+void MainW::btnFrac_Pressed()
+{
+    ui->stackedWidget->setCurrentWidget(ui->pageFrac);
+    ui->textPage->setText("Fracciones");
+    actualizarBotonesMenu();
+}
+
+
 void MainW::actualizarBotonesMenu()
 {
     const bool enCalculadora = (ui->stackedWidget->currentWidget() == ui->pageCalc);
@@ -283,6 +316,55 @@ void MainW::actualizarBotonesMenu()
     } else if (enFormulario) {
         ui->textPage->setText("Formulario");
     }
+}
+
+void MainW::graficarFraccion()
+{
+    bool okNum = false;
+    bool okDen = false;
+
+    int num = ui->lineEditNum->text().toInt(&okNum); // numerador
+    int den = ui->lineEditDen->text().toInt(&okDen);   // denominador
+
+    if (!okNum || !okDen) {
+        QMessageBox::warning(this, "Error", "Ingrese números válidos.");
+        return;
+    }
+
+    if (den <= 0) {
+        QMessageBox::warning(this, "Error", "El denominador debe ser mayor que 0.");
+        return;
+    }
+
+    if (num < 0 || num > den) {
+        QMessageBox::warning(this, "Error", "El numerador debe estar entre 0 y el denominador.");
+        return;
+    }
+
+    QPieSeries *series = new QPieSeries();
+    series->setPieSize(0.75);
+
+    for (int i = 0; i < den; i++) {
+        QPieSlice *slice = series->append("", 1);
+
+        if (i < num) {
+            slice->setBrush(QColor("#2bbec0"));
+        } else {
+            slice->setBrush(Qt::white);
+        }
+
+        slice->setPen(QPen(QColor("#0b5e8e"), 2));
+        slice->setLabelVisible(false);
+    }
+
+    QChart *chart = new QChart();
+    chart->addSeries(series);
+    chart->legend()->hide();
+    chart->setTitle("Representación de fracción");
+    chart->setBackgroundVisible(false);
+
+    ui->graphicsView->setRenderHint(QPainter::Antialiasing);
+    ui->graphicsView->setChart(chart);
 }
 
 // Destructor

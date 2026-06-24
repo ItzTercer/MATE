@@ -7,6 +7,15 @@
 #include <QIcon>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QtCore>
+#include <QtGui>
+#include <QtCharts/QChartView>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QPieSlice>
+#include <QtCharts/QChart>
+#include <QMessageBox>
+#include <QColor>
+#include <QPainter>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -32,10 +41,12 @@ private slots:
     void cePressed();
     void delPressed();
     void negatePressed();
-
+    void dotPressed();
     void btnCalc_Pressed();
     void btnForm_Pressed();
+    void btnFrac_Pressed();
     void actualizarBotonesMenu();
+    void graficarFraccion();
 
 private:
     Ui::MainW *ui;
