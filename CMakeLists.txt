@@ -12,11 +12,27 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Charts Svg SvgWidgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts Svg SvgWidgets)
 
+set(MOTOR
+    calc.cpp
+    formulario.cpp
+)
+
+set(JUEGO_SOURCES
+    game/funcion.cpp
+    game/nivel.cpp
+    game/niveles.cpp
+    game/plano.cpp
+    game/quiz.cpp
+    game/ventanajuego.cpp
+)
+
 set(PROJECT_SOURCES
-        main.cpp
-        mainw.cpp
-        mainw.h
-        mainw.ui
+    main.cpp
+    mainw.cpp
+    mainw.h
+    mainw.ui
+    ${MOTOR}
+    ${JUEGO_SOURCES}
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -36,6 +52,8 @@ else()
         )
     endif()
 endif()
+
+target_include_directories(MATE PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 target_link_libraries(MATE PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
@@ -59,7 +77,7 @@ set_target_properties(MATE PROPERTIES
 include(GNUInstallDirs)
 install(TARGETS MATE
     BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 

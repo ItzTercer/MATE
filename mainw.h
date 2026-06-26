@@ -19,6 +19,9 @@
 #include <QSvgWidget>
 #include <QPixmap>
 
+// Juego
+#include "game/ventanajuego.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainW;
@@ -47,6 +50,7 @@ private slots:
     void btnCalc_Pressed();
     void btnForm_Pressed();
     void btnFrac_Pressed();
+    void btnJuego_Pressed();       //botón del juego
     void actualizarBotonesMenu();
     void graficarFraccion();
 
@@ -60,5 +64,6 @@ private:
     QString operacionPendiente = "";
     bool esperandoNuevoNumero = true;
 
+    VentanaJuego *ventanaJuego = nullptr;
 };
 #endif // MAINW_H

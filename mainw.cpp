@@ -84,6 +84,7 @@ MainW::MainW(QWidget *parent)
     // sidebar
     connect(ui->btnCalc, &QPushButton::clicked, this, &MainW::btnCalc_Pressed);
     connect(ui->btnForm, &QPushButton::clicked, this, &MainW::btnForm_Pressed);
+    connect(ui->btnJuego, &QPushButton::clicked, this, &MainW::btnJuego_Pressed);
     connect(ui->btnFrac, &QPushButton::clicked, this, &MainW::btnFrac_Pressed);
     connect(ui->btnGit, &QPushButton::clicked, this, []() {
         QDesktopServices::openUrl(QUrl("https://github.com/ItzTercer/MATE"));
@@ -425,6 +426,18 @@ void MainW::ponerSvgEnWidget(QWidget *contenedor, const QString &rutaSvg)
     svg->load(rutaSvg);
 
     layout->addWidget(svg, 0, Qt::AlignCenter);
+}
+
+//Juego ^^
+void MainW::btnJuego_Pressed()
+{
+
+    if (!ventanaJuego) {
+        ventanaJuego = new VentanaJuego();
+    }
+    ventanaJuego->show();
+    ventanaJuego->raise();
+    ventanaJuego->activateWindow();
 }
 
 // Destructor

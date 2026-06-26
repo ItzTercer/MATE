@@ -7,6 +7,7 @@
         <file>resources/FormIcon.png</file>
         <file>resources/fraccIcon.png</file>
         <file>resources/calcIcon.png</file>
+        <file>resources/gameIcon.png</file>
     </qresource>
     <qresource prefix="/">
         <file>resources/Cuadrado de binomio.svg</file>
