@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Charts)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Charts Svg SvgWidgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts Svg SvgWidgets)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -40,6 +40,8 @@ endif()
 target_link_libraries(MATE PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Charts
+    Qt${QT_VERSION_MAJOR}::Svg
+    Qt${QT_VERSION_MAJOR}::SvgWidgets
 )
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)

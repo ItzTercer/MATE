@@ -16,6 +16,8 @@
 #include <QMessageBox>
 #include <QColor>
 #include <QPainter>
+#include <QSvgWidget>
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -50,6 +52,8 @@ private slots:
 
 private:
     Ui::MainW *ui;
+
+    void ponerSvgEnWidget(QWidget *contenedor, const QString &rutaSvg);
 
     double calcular(double a, double b, const QString& op);
     double acumulado = 0.0;

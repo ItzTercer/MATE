@@ -7,6 +7,40 @@ MainW::MainW(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //Svg😿
+    //Productos Notables
+    ponerSvgEnWidget(ui->widgetFormula1, ":/resources/Cuadrado de binomio.svg");
+    ponerSvgEnWidget(ui->widgetFormula2, ":/resources/Diferencia de Cuadrados.svg");
+    ponerSvgEnWidget(ui->widgetFormula3, ":/resources/Suma y resta de Cubos.svg");
+    ponerSvgEnWidget(ui->widgetFormula4, ":/resources/Ecc Cuadratica.svg");
+    //Fracciones
+    ponerSvgEnWidget(ui->widgetFormula5, ":/resources/Fracciones/Div.svg");
+    ponerSvgEnWidget(ui->widgetFormula6, ":/resources/Fracciones/Mul.svg");
+    ponerSvgEnWidget(ui->widgetFormula7, ":/resources/Fracciones/SuRe.svg");
+    //Logaritmos
+    ponerSvgEnWidget(ui->widgetFormula8, ":/resources/Logaritmos/Camba.svg");
+    ponerSvgEnWidget(ui->widgetFormula9, ":/resources/Logaritmos/Cance.svg");
+    ponerSvgEnWidget(ui->widgetFormula10, ":/resources/Logaritmos/Def.svg");
+    ponerSvgEnWidget(ui->widgetFormula11, ":/resources/Logaritmos/Div.svg");
+    ponerSvgEnWidget(ui->widgetFormula12, ":/resources/Logaritmos/Ln.svg");
+    ponerSvgEnWidget(ui->widgetFormula13, ":/resources/Logaritmos/Pot.svg");
+    ponerSvgEnWidget(ui->widgetFormula14, ":/resources/Logaritmos/Pro.svg");
+    //Raíces
+    ponerSvgEnWidget(ui->widgetFormula15, ":/resources/Raices/Def.svg");
+    ponerSvgEnWidget(ui->widgetFormula16, ":/resources/Raices/DivRaiz.svg");
+    ponerSvgEnWidget(ui->widgetFormula17, ":/resources/Raices/Mismo.svg");
+    ponerSvgEnWidget(ui->widgetFormula18, ":/resources/Raices/RaizPot.svg");
+    ponerSvgEnWidget(ui->widgetFormula19, ":/resources/Raices/RaizProd.svg");
+    ponerSvgEnWidget(ui->widgetFormula20, ":/resources/Raices/RaizRaiz.svg");
+    //Potencias
+    ponerSvgEnWidget(ui->widgetFormula21, ":/resources/Potencias/Def.svg");
+    ponerSvgEnWidget(ui->widgetFormula22, ":/resources/Potencias/DivBase.svg");
+    ponerSvgEnWidget(ui->widgetFormula23, ":/resources/Potencias/IgualBase.svg");
+    ponerSvgEnWidget(ui->widgetFormula24, ":/resources/Potencias/Negativo.svg");
+    ponerSvgEnWidget(ui->widgetFormula25, ":/resources/Potencias/PorProd.svg");
+    ponerSvgEnWidget(ui->widgetFormula26, ":/resources/Potencias/PotPot.svg");
+    ponerSvgEnWidget(ui->widgetFormula27, ":/resources/Potencias/PotRaiz.svg");
+
     // Sidebar: iconos y tooltip
     ui->btnCalc->setCheckable(true);
     ui->btnForm->setCheckable(true);
@@ -66,6 +100,7 @@ MainW::MainW(QWidget *parent)
     //Graficadora de fracciones
     connect(ui->btnGraficarF, &QPushButton::clicked,
             this, &MainW::graficarFraccion);
+    ui->graphicsView->setStyleSheet("background: #1F1F1F; border: none;");
 }
 
 // Funciones :D
@@ -152,7 +187,13 @@ double MainW::calcular(double a, double b, const QString& op)
         if (b == 0) return NAN;
         return a / b;
     }
-    if (op == "^") return std::pow(a, b);
+    if (op == "^") {
+        if (a == 0 && b == 0) return NAN;
+        if (b == 0) return 1.0;
+        if (a == 0 && b < 0) return NAN;
+
+        return std::pow(a, b);
+    }
 
     return NAN;
 }
@@ -361,10 +402,29 @@ void MainW::graficarFraccion()
     chart->addSeries(series);
     chart->legend()->hide();
     chart->setTitle("Representación de fracción");
+    chart->setTitleBrush(QBrush(Qt::white));
     chart->setBackgroundVisible(false);
 
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
     ui->graphicsView->setChart(chart);
+}
+
+void MainW::ponerSvgEnWidget(QWidget *contenedor, const QString &rutaSvg)
+{
+    if (!contenedor) return;
+
+    QLayout *layoutExistente = contenedor->layout();
+    QVBoxLayout *layout = qobject_cast<QVBoxLayout*>(layoutExistente);
+
+    if (!layout) {
+        layout = new QVBoxLayout(contenedor);
+        layout->setContentsMargins(0, 0, 0, 0);
+    }
+
+    QSvgWidget *svg = new QSvgWidget(contenedor);
+    svg->load(rutaSvg);
+
+    layout->addWidget(svg, 0, Qt::AlignCenter);
 }
 
 // Destructor
