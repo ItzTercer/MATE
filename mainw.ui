@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>429</width>
+    <width>428</width>
     <height>530</height>
    </rect>
   </property>
@@ -291,7 +291,7 @@ QToolButton::hover {
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageCalc">
      <widget class="QFrame" name="calc">
@@ -680,57 +680,59 @@ QToolBox::tab:selected {
     color: #ffffff;
 	font: 700 10pt &quot;Segoe UI&quot;;
 }
-
 </string>
      </property>
-     <widget class="QWidget" name="verticalLayoutWidget_2">
+     <widget class="QScrollArea" name="scrollAreaForm">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>0</y>
-        <width>371</width>
-        <height>471</height>
+        <width>381</width>
+        <height>491</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <property name="sizeConstraint">
-        <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>379</width>
+         <height>489</height>
+        </rect>
        </property>
-       <item>
-        <widget class="QToolBox" name="secciones">
-         <property name="font">
-          <font>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: #1F1F1F;</string>
-         </property>
-         <property name="currentIndex">
-          <number>1</number>
-         </property>
-         <widget class="QWidget" name="ProductosNotables">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>100</width>
-            <height>30</height>
-           </rect>
+       <layout class="QVBoxLayout" name="verticalLayoutForm">
+        <item>
+         <widget class="QToolBox" name="secciones">
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
           </property>
-          <attribute name="label">
-           <string>Productos Notables</string>
-          </attribute>
-          <widget class="QWidget" name="verticalLayoutWidget_3">
+          <property name="styleSheet">
+           <string notr="true">background-color: #1F1F1F;</string>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="ProductosNotables">
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>0</y>
-             <width>371</width>
-             <height>227</height>
+             <y>-60</y>
+             <width>340</width>
+             <height>247</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
+           <attribute name="label">
+            <string>Productos Notables</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlProductos">
             <item>
              <widget class="QToolBox" name="toolBox">
               <property name="styleSheet">
@@ -764,14 +766,14 @@ QToolBox &gt; QWidget {
 </string>
               </property>
               <property name="currentIndex">
-               <number>0</number>
+               <number>3</number>
               </property>
               <widget class="QWidget" name="page2">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>367</width>
+                 <width>316</width>
                  <height>83</height>
                 </rect>
                </property>
@@ -794,20 +796,20 @@ QToolBox &gt; QWidget {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>Suma por diferencia</string>
+                <string>Diferencia de Cuadrados</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula2" native="true">
                 <property name="geometry">
                  <rect>
-                  <x>0</x>
+                  <x>-10</x>
                   <y>0</y>
                   <width>371</width>
-                  <height>80</height>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
@@ -817,50 +819,32 @@ QToolBox &gt; QWidget {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>Binomio al cubo</string>
+                <string>Suma y Resta de Cubos</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula3" native="true">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>371</width>
+                  <width>311</width>
                   <height>81</height>
                  </rect>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>371</width>
-                  <height>80</height>
-                 </size>
-                </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page">
+              <widget class="QWidget" name="page4">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>367</width>
-                 <height>16</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>367</width>
-                 <height>0</height>
-                </size>
                </property>
                <attribute name="label">
                 <string>Ecuación Cuadrática</string>
@@ -868,17 +852,11 @@ QToolBox &gt; QWidget {
                <widget class="QWidget" name="widgetFormula4" native="true">
                 <property name="geometry">
                  <rect>
-                  <x>-1</x>
+                  <x>0</x>
                   <y>0</y>
                   <width>371</width>
-                  <height>80</height>
+                  <height>81</height>
                  </rect>
-                </property>
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
                 </property>
                </widget>
               </widget>
@@ -886,31 +864,21 @@ QToolBox &gt; QWidget {
             </item>
            </layout>
           </widget>
-         </widget>
-         <widget class="QWidget" name="Potencias">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>369</width>
-            <height>294</height>
-           </rect>
-          </property>
-          <attribute name="label">
-           <string>Potencias</string>
-          </attribute>
-          <widget class="QWidget" name="verticalLayoutWidget_9">
+          <widget class="QWidget" name="Logaritmos">
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>1</y>
-             <width>381</width>
-             <height>332</height>
+             <y>-165</y>
+             <width>340</width>
+             <height>352</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_9">
+           <attribute name="label">
+            <string>Logaritmos</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlLogaritmos">
             <item>
-             <widget class="QToolBox" name="toolBox_5">
+             <widget class="QToolBox" name="toolBoxLog">
               <property name="styleSheet">
                <string notr="true">QToolBox {
     border-radius: 10px;
@@ -944,294 +912,13 @@ QToolBox &gt; QWidget {
               <property name="currentIndex">
                <number>6</number>
               </property>
-              <widget class="QWidget" name="page3_5">
+              <widget class="QWidget" name="pageLog1">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Definición de Potencia</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula21" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>10</y>
-                  <width>371</width>
-                  <height>81</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>371</width>
-                  <height>80</height>
-                 </size>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page_10">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>División de Potencias de Igual Base</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula22" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>-1</x>
-                  <y>0</y>
-                  <width>371</width>
-                  <height>80</height>
-                 </rect>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page2_5">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Multiplicación de Potencias de Igual Base</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula23" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>10</y>
-                  <width>371</width>
-                  <height>81</height>
-                 </rect>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page1_5">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Exponente Negativo</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula24" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>10</y>
-                  <width>371</width>
-                  <height>80</height>
-                 </rect>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page_11">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Potencia de un Producto</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula25" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>-1</x>
-                  <y>10</y>
-                  <width>361</width>
-                  <height>80</height>
-                 </rect>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page_12">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Potencia de una Potencia</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula26" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>0</y>
-                  <width>361</width>
-                  <height>80</height>
-                 </rect>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page_13">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>377</width>
+                 <width>316</width>
                  <height>83</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Exponente Fraccionario</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula27" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>0</y>
-                  <width>361</width>
-                  <height>80</height>
-                 </rect>
-                </property>
-               </widget>
-              </widget>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="Logs">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>100</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <attribute name="label">
-           <string>Logaritmos</string>
-          </attribute>
-          <widget class="QWidget" name="verticalLayoutWidget_6">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>1</y>
-             <width>371</width>
-             <height>332</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_6">
-            <item>
-             <widget class="QToolBox" name="toolBox_3">
-              <property name="styleSheet">
-               <string notr="true">QToolBox {
-    border-radius: 10px;
-}
-
-QToolBox::tab {
-    background-color: #2f2f2f;
-    color: #f5f5f5;
-    border-radius: 8px;
-	padding: 0px 20px;
-	font: 600 8pt &quot;Segoe UI&quot;;
-}
-
-QToolBox::tab:hover {
-    background-color: #3b3b3b;
-}
-
-QToolBox::tab:selected {
-    background-color: rgb(11, 136, 189);
-    color: #ffffff;
-    border: 1px solid #0b8ac2;
-}
-
-QToolBox &gt; QWidget {
-    background-color: #3B3B3B;
-    border: 1px solid #333333;
-    border-radius: 6px;
-}
-</string>
-              </property>
-              <property name="currentIndex">
-               <number>6</number>
-              </property>
-              <widget class="QWidget" name="page3_3">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Definición de logaritmo</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula10" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>10</y>
-                  <width>371</width>
-                  <height>81</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>371</width>
-                  <height>80</height>
-                 </size>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page_3">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
-                </rect>
-               </property>
-               <attribute name="label">
-                <string>Logaritmo Natural</string>
-               </attribute>
-               <widget class="QWidget" name="widgetFormula12" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>-1</x>
-                  <y>0</y>
-                  <width>371</width>
-                  <height>80</height>
-                 </rect>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page2_3">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -1241,101 +928,147 @@ QToolBox &gt; QWidget {
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>10</y>
+                  <y>0</y>
                   <width>371</width>
                   <height>81</height>
                  </rect>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page1_3">
+              <widget class="QWidget" name="pageLog2">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>Cancelación entre logaritmo y potencia</string>
+                <string>Cancelación</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula9" native="true">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>10</y>
+                  <y>0</y>
                   <width>371</width>
-                  <height>80</height>
+                  <height>71</height>
                  </rect>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page_2">
+              <widget class="QWidget" name="pageLog3">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>Logaritmo de un Cociente</string>
+                <string>Definición</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula10" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLog4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>División</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula11" native="true">
                 <property name="geometry">
                  <rect>
-                  <x>-1</x>
-                  <y>10</y>
-                  <width>361</width>
-                  <height>80</height>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page_5">
+              <widget class="QWidget" name="pageLog5">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>Logaritmo de una Potencia</string>
+                <string>Logaritmo Natural</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula12" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLog6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Potencia</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula13" native="true">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>361</width>
-                  <height>80</height>
+                  <width>371</width>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page_7">
+              <widget class="QWidget" name="pageLog7">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>367</width>
+                 <width>316</width>
                  <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>Logaritmo de un Producto</string>
+                <string>Producto</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula14" native="true">
                 <property name="geometry">
                  <rect>
-                  <x>10</x>
+                  <x>0</x>
                   <y>0</y>
-                  <width>361</width>
-                  <height>80</height>
+                  <width>371</width>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
@@ -1344,31 +1077,21 @@ QToolBox &gt; QWidget {
             </item>
            </layout>
           </widget>
-         </widget>
-         <widget class="QWidget" name="Raices">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>100</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <attribute name="label">
-           <string>Raíces</string>
-          </attribute>
-          <widget class="QWidget" name="verticalLayoutWidget_7">
+          <widget class="QWidget" name="Raices">
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>1</y>
-             <width>371</width>
-             <height>297</height>
+             <y>-130</y>
+             <width>340</width>
+             <height>317</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_7">
+           <attribute name="label">
+            <string>Raíces</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlRaices">
             <item>
-             <widget class="QToolBox" name="toolBox_4">
+             <widget class="QToolBox" name="toolBoxRaiz">
               <property name="styleSheet">
                <string notr="true">QToolBox {
     border-radius: 10px;
@@ -1402,103 +1125,87 @@ QToolBox &gt; QWidget {
               <property name="currentIndex">
                <number>5</number>
               </property>
-              <widget class="QWidget" name="page3_4">
+              <widget class="QWidget" name="pageRaiz1">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>Definición de Raiz</string>
+                <string>Definición</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula15" native="true">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>10</y>
+                  <y>0</y>
                   <width>371</width>
                   <height>81</height>
                  </rect>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>371</width>
-                  <height>80</height>
-                 </size>
-                </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page_6">
+              <widget class="QWidget" name="pageRaiz2">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
-                <string>División de Raíces de Igual Índice</string>
+                <string>División de Raíces</string>
                </attribute>
                <widget class="QWidget" name="widgetFormula16" native="true">
                 <property name="geometry">
                  <rect>
-                  <x>-1</x>
-                  <y>10</y>
+                  <x>0</x>
+                  <y>0</y>
                   <width>371</width>
-                  <height>80</height>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page2_4">
+              <widget class="QWidget" name="pageRaiz3">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>325</width>
+                 <height>66</height>
                 </rect>
                </property>
                <attribute name="label">
                 <string>Potencia de una Raíz 1</string>
                </attribute>
-               <widget class="QWidget" name="verticalLayoutWidget_8">
-                <property name="geometry">
-                 <rect>
-                  <x>-1</x>
-                  <y>-1</y>
-                  <width>371</width>
-                  <height>121</height>
-                 </rect>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_8">
-                 <item>
-                  <widget class="QWidget" name="widgetFormula17" native="true"/>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label">
-                   <property name="text">
-                    <string>(Cuando el índice y el exponente son iguales.)</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignmentFlag::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
+               <layout class="QVBoxLayout" name="vlRaiz3">
+                <item>
+                 <widget class="QWidget" name="widgetFormula17" native="true"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="labelRaiz3">
+                  <property name="text">
+                   <string>(Cuando el índice y el exponente son iguales.)</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignmentFlag::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
-              <widget class="QWidget" name="page1_4">
+              <widget class="QWidget" name="pageRaiz4">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -1508,20 +1215,20 @@ QToolBox &gt; QWidget {
                 <property name="geometry">
                  <rect>
                   <x>0</x>
-                  <y>10</y>
+                  <y>0</y>
                   <width>371</width>
-                  <height>80</height>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page_8">
+              <widget class="QWidget" name="pageRaiz5">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -1530,20 +1237,20 @@ QToolBox &gt; QWidget {
                <widget class="QWidget" name="widgetFormula19" native="true">
                 <property name="geometry">
                  <rect>
-                  <x>-1</x>
-                  <y>10</y>
-                  <width>361</width>
-                  <height>80</height>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
               </widget>
-              <widget class="QWidget" name="page_9">
+              <widget class="QWidget" name="pageRaiz6">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>367</width>
+                 <width>316</width>
                  <height>83</height>
                 </rect>
                </property>
@@ -1555,8 +1262,8 @@ QToolBox &gt; QWidget {
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>361</width>
-                  <height>80</height>
+                  <width>371</width>
+                  <height>81</height>
                  </rect>
                 </property>
                </widget>
@@ -1565,29 +1272,232 @@ QToolBox &gt; QWidget {
             </item>
            </layout>
           </widget>
-         </widget>
-         <widget class="QWidget" name="Fracciones">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>100</width>
-            <height>30</height>
-           </rect>
-          </property>
-          <attribute name="label">
-           <string>Fracciones</string>
-          </attribute>
-          <widget class="QWidget" name="verticalLayoutWidget_5">
+          <widget class="QWidget" name="Potencias">
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>0</y>
-             <width>371</width>
-             <height>192</height>
+             <y>-165</y>
+             <width>340</width>
+             <height>352</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_5">
+           <attribute name="label">
+            <string>Potencias</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlPotencias">
+            <item>
+             <widget class="QToolBox" name="toolBoxPot">
+              <property name="styleSheet">
+               <string notr="true">QToolBox {
+    border-radius: 10px;
+}
+
+QToolBox::tab {
+    background-color: #2f2f2f;
+    color: #f5f5f5;
+    border-radius: 8px;
+	padding: 0px 20px;
+	font: 600 8pt &quot;Segoe UI&quot;;
+}
+
+QToolBox::tab:hover {
+    background-color: #3b3b3b;
+}
+
+QToolBox::tab:selected {
+    background-color: rgb(11, 136, 189);
+    color: #ffffff;
+    border: 1px solid #0b8ac2;
+}
+
+QToolBox &gt; QWidget {
+    background-color: #3B3B3B;
+    border: 1px solid #333333;
+    border-radius: 6px;
+}
+</string>
+              </property>
+              <property name="currentIndex">
+               <number>6</number>
+              </property>
+              <widget class="QWidget" name="pagePot1">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Definición</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula21" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>91</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pagePot2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>División de Base Igual</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula22" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pagePot3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Igual Base</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula23" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pagePot4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Exponente Negativo</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula24" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pagePot5">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Potencia de un Producto</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula25" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pagePot6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Potencia de una Potencia</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula26" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pagePot7">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Potencia de una Raíz</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula27" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Fracciones">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-25</y>
+             <width>340</width>
+             <height>212</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Fracciones</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlFracciones">
             <item>
              <widget class="QToolBox" name="toolBox_2">
               <property name="styleSheet">
@@ -1621,14 +1531,14 @@ QToolBox &gt; QWidget {
 </string>
               </property>
               <property name="currentIndex">
-               <number>0</number>
+               <number>2</number>
               </property>
               <widget class="QWidget" name="page2_2">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>367</width>
+                 <width>316</width>
                  <height>83</height>
                 </rect>
                </property>
@@ -1641,7 +1551,7 @@ QToolBox &gt; QWidget {
                   <x>0</x>
                   <y>10</y>
                   <width>371</width>
-                  <height>81</height>
+                  <height>61</height>
                  </rect>
                 </property>
                </widget>
@@ -1651,8 +1561,8 @@ QToolBox &gt; QWidget {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -1674,8 +1584,8 @@ QToolBox &gt; QWidget {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>98</width>
-                 <height>28</height>
+                 <width>316</width>
+                 <height>83</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -1687,14 +1597,865 @@ QToolBox &gt; QWidget {
                   <x>0</x>
                   <y>10</y>
                   <width>371</width>
+                  <height>71</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Limites">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-200</y>
+             <width>340</width>
+             <height>387</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Límites</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlLimites">
+            <item>
+             <widget class="QToolBox" name="toolBoxLim">
+              <property name="styleSheet">
+               <string notr="true">QToolBox {
+    border-radius: 10px;
+}
+QToolBox::tab {
+    background-color: #2f2f2f;
+    color: #f5f5f5;
+    border-radius: 8px;
+	padding: 0px 20px;
+	font: 600 8pt &quot;Segoe UI&quot;;
+}
+QToolBox::tab:hover {
+    background-color: #3b3b3b;
+}
+QToolBox::tab:selected {
+    background-color: rgb(11, 136, 189);
+    color: #ffffff;
+    border: 1px solid #0b8ac2;
+}
+QToolBox &gt; QWidget {
+    background-color: #3B3B3B;
+    border: 1px solid #333333;
+    border-radius: 6px;
+}
+</string>
+              </property>
+              <property name="currentIndex">
+               <number>7</number>
+              </property>
+              <widget class="QWidget" name="pageLim1">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite notable: sen(x)/x</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula28" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
                   <height>81</height>
                  </rect>
                 </property>
-                <property name="minimumSize">
-                 <size>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLim2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite notable: cos(x)/x</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula29" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
                   <width>371</width>
-                  <height>80</height>
-                 </size>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLim3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite notable: cos notable 2</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula30" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLim4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite del número e</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula31" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLim5">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite de e (forma 2)</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula32" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLim6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite de e (forma 3)</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula33" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLim7">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite del ln (forma 1)</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula34" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageLim8">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Límite del ln (forma 2)</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula35" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Derivadas">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-305</y>
+             <width>340</width>
+             <height>492</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Derivadas</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlDerivadas">
+            <item>
+             <widget class="QToolBox" name="toolBoxDer">
+              <property name="styleSheet">
+               <string notr="true">QToolBox {
+    border-radius: 10px;
+}
+QToolBox::tab {
+    background-color: #2f2f2f;
+    color: #f5f5f5;
+    border-radius: 8px;
+	padding: 0px 20px;
+	font: 600 8pt &quot;Segoe UI&quot;;
+}
+QToolBox::tab:hover {
+    background-color: #3b3b3b;
+}
+QToolBox::tab:selected {
+    background-color: rgb(11, 136, 189);
+    color: #ffffff;
+    border: 1px solid #0b8ac2;
+}
+QToolBox &gt; QWidget {
+    background-color: #3B3B3B;
+    border: 1px solid #333333;
+    border-radius: 6px;
+}
+</string>
+              </property>
+              <property name="currentIndex">
+               <number>10</number>
+              </property>
+              <widget class="QWidget" name="pageDer1">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada de una constante</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula36" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada de una función</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula37" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada: división</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula38" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada de e^x</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula39" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer5">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada: producto</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula40" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada de sen(x)</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula41" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer7">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada de cos(x)</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula42" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer8">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada en un punto</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula43" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer9">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada de ln(x)</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula44" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer10">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Derivada de potencia</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula45" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageDer11">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Regla de la cadena</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula46" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Trigonometria">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-175</y>
+             <width>340</width>
+             <height>527</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Trigonometría</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="vlTrig">
+            <item>
+             <widget class="QToolBox" name="toolBoxTrig">
+              <property name="styleSheet">
+               <string notr="true">QToolBox {
+    border-radius: 10px;
+}
+QToolBox::tab {
+    background-color: #2f2f2f;
+    color: #f5f5f5;
+    border-radius: 8px;
+	padding: 0px 20px;
+	font: 600 8pt &quot;Segoe UI&quot;;
+}
+QToolBox::tab:hover {
+    background-color: #3b3b3b;
+}
+QToolBox::tab:selected {
+    background-color: rgb(11, 136, 189);
+    color: #ffffff;
+    border: 1px solid #0b8ac2;
+}
+QToolBox &gt; QWidget {
+    background-color: #3B3B3B;
+    border: 1px solid #333333;
+    border-radius: 6px;
+}
+</string>
+              </property>
+              <property name="currentIndex">
+               <number>6</number>
+              </property>
+              <widget class="QWidget" name="pageTrig1">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Identidad Pitagórica 1</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula47" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Identidad Pitagórica 2</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula48" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig3">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Identidad Pitagórica 3</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula49" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Tangente</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula50" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig5">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Ángulo doble: cos</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula51" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Suma de cosenos</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula52" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig7">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Cotangente</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula53" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig8">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Secante</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula54" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig9">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Suma de tangentes</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula55" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig10">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Ángulo doble: tan</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula56" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig11">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Cosecante</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula57" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="pageTrig12">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>316</width>
+                 <height>83</height>
+                </rect>
+               </property>
+               <attribute name="label">
+                <string>Suma de senos</string>
+               </attribute>
+               <widget class="QWidget" name="widgetFormula58" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>371</width>
+                  <height>81</height>
+                 </rect>
                 </property>
                </widget>
               </widget>
@@ -1703,9 +2464,9 @@ QToolBox &gt; QWidget {
            </layout>
           </widget>
          </widget>
-        </widget>
-       </item>
-      </layout>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="pageFrac">

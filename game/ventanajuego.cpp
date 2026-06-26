@@ -120,18 +120,18 @@ QWidget *VentanaJuego::crearComoJugar() {
     lay->addWidget(titulo);
 
     auto *texto = new QLabel(
-        "🎯  Objetivo: recorrer los 4 mundos dominando cada tipo de funcion.\n\n"
-        "📈  Atrapa la Curva: veras una curva AZUL punteada (el objetivo).\n"
+        "Objetivo: recorrer los 4 mundos dominando cada tipo de funcion.\n\n"
+        "   Atrapa la Curva: veras una curva AZUL punteada (el objetivo).\n"
         "      Mueve los controles a, b y c para que tu curva VERDE encaje encima.\n"
         "      Observa como cada coeficiente cambia la forma:\n"
         "        • a  →  inclinacion / apertura\n"
         "        • b  →  desplazamiento\n"
         "        • c  →  altura\n"
         "      Cuando la precision llegue al 90%, pulsa 'Comprobar'.\n\n"
-        "❓  Adivina la Funcion: elige la expresion que corresponde a la curva.\n"
+        "   Adivina la Funcion: elige la expresion que corresponde a la curva.\n"
         "      Si fallas, pierdes una vida.\n\n"
-        "🔓  Completa todos los niveles de un mundo para desbloquear el siguiente.\n"
-        "⭐  Cuantos menos intentos uses, mas puntos ganas.");
+        "    Completa todos los niveles de un mundo para desbloquear el siguiente.\n"
+        "    Cuantos menos intentos uses, mas puntos ganas. :D");
     texto->setStyleSheet("color:#cfd6e4;font-size:14px;");
     texto->setWordWrap(true);
     lay->addWidget(texto);

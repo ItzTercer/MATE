@@ -17,6 +17,7 @@
 #include <QColor>
 #include <QPainter>
 #include <QSvgWidget>
+#include <QSvgRenderer>
 #include <QPixmap>
 
 // Juego
@@ -50,7 +51,7 @@ private slots:
     void btnCalc_Pressed();
     void btnForm_Pressed();
     void btnFrac_Pressed();
-    void btnJuego_Pressed();       //botón del juego
+    void btnJuego_Pressed();       //botón del juego :3
     void actualizarBotonesMenu();
     void graficarFraccion();
 

@@ -37,5 +37,37 @@
         <file>resources/Raices/RaizPot.svg</file>
         <file>resources/Raices/RaizProd.svg</file>
         <file>resources/Raices/RaizRaiz.svg</file>
+        <file>resources/Derivadas/Cadena.svg</file>
+        <file>resources/Derivadas/constante.svg</file>
+        <file>resources/Derivadas/der-cos.svg</file>
+        <file>resources/Derivadas/der-e.svg</file>
+        <file>resources/Derivadas/der-ln.svg</file>
+        <file>resources/Derivadas/der-sen.svg</file>
+        <file>resources/Derivadas/division.svg</file>
+        <file>resources/Derivadas/funcion.svg</file>
+        <file>resources/Derivadas/potencia.svg</file>
+        <file>resources/Derivadas/producto.svg</file>
+        <file>resources/Derivadas/punto.svg</file>
+        <file>resources/Limites/cos-notable.svg</file>
+        <file>resources/Limites/cos-notable-2.svg</file>
+        <file>resources/Limites/e.svg</file>
+        <file>resources/Limites/e-2.svg</file>
+        <file>resources/Limites/e-3.svg</file>
+        <file>resources/Limites/ln-1.svg</file>
+        <file>resources/Limites/ln-2.svg</file>
+        <file>resources/Limites/sen-notable.svg</file>
+        <file>resources/Trigonometria/cos-doble.svg</file>
+        <file>resources/Trigonometria/cos-suma.svg</file>
+        <file>resources/Trigonometria/cot.svg</file>
+        <file>resources/Trigonometria/csc.svg</file>
+        <file>resources/Trigonometria/Pitagorica.svg</file>
+        <file>resources/Trigonometria/Pitagorica2.svg</file>
+        <file>resources/Trigonometria/Pitagorica3.svg</file>
+        <file>resources/Trigonometria/sec.svg</file>
+        <file>resources/Trigonometria/sen-doble.svg</file>
+        <file>resources/Trigonometria/sen-suma.svg</file>
+        <file>resources/Trigonometria/Tan.svg</file>
+        <file>resources/Trigonometria/tan-doble.svg</file>
+        <file>resources/Trigonometria/tan-suma.svg</file>
     </qresource>
 </RCC>

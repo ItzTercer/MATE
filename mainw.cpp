@@ -7,6 +7,9 @@ MainW::MainW(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->scrollAreaForm->setWidgetResizable(true);
+    ui->scrollAreaForm->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+
     //Svg😿
     //Productos Notables
     ponerSvgEnWidget(ui->widgetFormula1, ":/resources/Cuadrado de binomio.svg");
@@ -40,6 +43,40 @@ MainW::MainW(QWidget *parent)
     ponerSvgEnWidget(ui->widgetFormula25, ":/resources/Potencias/PorProd.svg");
     ponerSvgEnWidget(ui->widgetFormula26, ":/resources/Potencias/PotPot.svg");
     ponerSvgEnWidget(ui->widgetFormula27, ":/resources/Potencias/PotRaiz.svg");
+    //Límites
+    ponerSvgEnWidget(ui->widgetFormula28, ":/resources/Limites/sen-notable.svg");
+    ponerSvgEnWidget(ui->widgetFormula29, ":/resources/Limites/cos-notable.svg");
+    ponerSvgEnWidget(ui->widgetFormula30, ":/resources/Limites/cos-notable-2.svg");
+    ponerSvgEnWidget(ui->widgetFormula31, ":/resources/Limites/e.svg");
+    ponerSvgEnWidget(ui->widgetFormula32, ":/resources/Limites/e-2.svg");
+    ponerSvgEnWidget(ui->widgetFormula33, ":/resources/Limites/e-3.svg");
+    ponerSvgEnWidget(ui->widgetFormula34, ":/resources/Limites/ln-1.svg");
+    ponerSvgEnWidget(ui->widgetFormula35, ":/resources/Limites/ln-2.svg");
+    //Derivadas
+    ponerSvgEnWidget(ui->widgetFormula36, ":/resources/Derivadas/constante.svg");
+    ponerSvgEnWidget(ui->widgetFormula37, ":/resources/Derivadas/funcion.svg");
+    ponerSvgEnWidget(ui->widgetFormula38, ":/resources/Derivadas/division.svg");
+    ponerSvgEnWidget(ui->widgetFormula39, ":/resources/Derivadas/der-e.svg");
+    ponerSvgEnWidget(ui->widgetFormula40, ":/resources/Derivadas/producto.svg");
+    ponerSvgEnWidget(ui->widgetFormula41, ":/resources/Derivadas/der-sen.svg");
+    ponerSvgEnWidget(ui->widgetFormula42, ":/resources/Derivadas/der-cos.svg");
+    ponerSvgEnWidget(ui->widgetFormula43, ":/resources/Derivadas/punto.svg");
+    ponerSvgEnWidget(ui->widgetFormula44, ":/resources/Derivadas/der-ln.svg");
+    ponerSvgEnWidget(ui->widgetFormula45, ":/resources/Derivadas/potencia.svg");
+    ponerSvgEnWidget(ui->widgetFormula46, ":/resources/Derivadas/Cadena.svg");
+    //Trigonometría
+    ponerSvgEnWidget(ui->widgetFormula47, ":/resources/Trigonometria/Pitagorica.svg");
+    ponerSvgEnWidget(ui->widgetFormula48, ":/resources/Trigonometria/Pitagorica2.svg");
+    ponerSvgEnWidget(ui->widgetFormula49, ":/resources/Trigonometria/Pitagorica3.svg");
+    ponerSvgEnWidget(ui->widgetFormula50, ":/resources/Trigonometria/Tan.svg");
+    ponerSvgEnWidget(ui->widgetFormula51, ":/resources/Trigonometria/cos-doble.svg");
+    ponerSvgEnWidget(ui->widgetFormula52, ":/resources/Trigonometria/cos-suma.svg");
+    ponerSvgEnWidget(ui->widgetFormula53, ":/resources/Trigonometria/cot.svg");
+    ponerSvgEnWidget(ui->widgetFormula54, ":/resources/Trigonometria/sec.svg");
+    ponerSvgEnWidget(ui->widgetFormula55, ":/resources/Trigonometria/tan-suma.svg");
+    ponerSvgEnWidget(ui->widgetFormula56, ":/resources/Trigonometria/tan-doble.svg");
+    ponerSvgEnWidget(ui->widgetFormula57, ":/resources/Trigonometria/csc.svg");
+    ponerSvgEnWidget(ui->widgetFormula58, ":/resources/Trigonometria/sen-suma.svg");
 
     // Sidebar: iconos y tooltip
     ui->btnCalc->setCheckable(true);
