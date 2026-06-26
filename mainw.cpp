@@ -139,6 +139,8 @@ MainW::MainW(QWidget *parent)
     connect(ui->btnGraficarF, &QPushButton::clicked,
             this, &MainW::graficarFraccion);
     ui->graphicsView->setStyleSheet("background: #1F1F1F; border: none;");
+    ui->graphicsView->hide();
+    ui->labelPlaceholderFrac->show();
 }
 
 // Funciones :D
@@ -445,6 +447,9 @@ void MainW::graficarFraccion()
 
     ui->graphicsView->setRenderHint(QPainter::Antialiasing);
     ui->graphicsView->setChart(chart);
+
+    ui->labelPlaceholderFrac->hide();
+    ui->graphicsView->show();
 }
 
 void MainW::ponerSvgEnWidget(QWidget *contenedor, const QString &rutaSvg)

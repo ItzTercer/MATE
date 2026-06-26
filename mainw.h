@@ -17,7 +17,6 @@
 #include <QColor>
 #include <QPainter>
 #include <QSvgWidget>
-#include <QSvgRenderer>
 #include <QPixmap>
 
 // Juego
