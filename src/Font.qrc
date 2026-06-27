@@ -1,0 +1,74 @@
+<RCC>
+    <qresource prefix="/fonts"/>
+    <qresource prefix="/icons">
+        <file>resources/github-white-icon.png</file>
+        <file>resources/logomate.png</file>
+        <file>resources/suncat.jpg</file>
+        <file>resources/FormIcon.png</file>
+        <file>resources/fraccIcon.png</file>
+        <file>resources/calcIcon.png</file>
+        <file>resources/gameIcon.png</file>
+        <file>resources/graficon.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>resources/Cuadrado de binomio.svg</file>
+        <file>resources/Diferencia de Cuadrados.svg</file>
+        <file>resources/Ecc Cuadratica.svg</file>
+        <file>resources/Suma y resta de Cubos.svg</file>
+        <file>resources/Fracciones/Div.svg</file>
+        <file>resources/Fracciones/Mul.svg</file>
+        <file>resources/Fracciones/SuRe.svg</file>
+        <file>resources/Logaritmos/Camba.svg</file>
+        <file>resources/Logaritmos/Cance.svg</file>
+        <file>resources/Logaritmos/Def.svg</file>
+        <file>resources/Logaritmos/Div.svg</file>
+        <file>resources/Logaritmos/Ln.svg</file>
+        <file>resources/Logaritmos/Pot.svg</file>
+        <file>resources/Logaritmos/Pro.svg</file>
+        <file>resources/Potencias/Def.svg</file>
+        <file>resources/Potencias/DivBase.svg</file>
+        <file>resources/Potencias/IgualBase.svg</file>
+        <file>resources/Potencias/Negativo.svg</file>
+        <file>resources/Potencias/PorProd.svg</file>
+        <file>resources/Potencias/PotPot.svg</file>
+        <file>resources/Potencias/PotRaiz.svg</file>
+        <file>resources/Raices/Def.svg</file>
+        <file>resources/Raices/DivRaiz.svg</file>
+        <file>resources/Raices/Mismo.svg</file>
+        <file>resources/Raices/RaizPot.svg</file>
+        <file>resources/Raices/RaizProd.svg</file>
+        <file>resources/Raices/RaizRaiz.svg</file>
+        <file>resources/Derivadas/Cadena.svg</file>
+        <file>resources/Derivadas/constante.svg</file>
+        <file>resources/Derivadas/der-cos.svg</file>
+        <file>resources/Derivadas/der-e.svg</file>
+        <file>resources/Derivadas/der-ln.svg</file>
+        <file>resources/Derivadas/der-sen.svg</file>
+        <file>resources/Derivadas/division.svg</file>
+        <file>resources/Derivadas/funcion.svg</file>
+        <file>resources/Derivadas/potencia.svg</file>
+        <file>resources/Derivadas/producto.svg</file>
+        <file>resources/Derivadas/punto.svg</file>
+        <file>resources/Limites/cos-notable.svg</file>
+        <file>resources/Limites/cos-notable-2.svg</file>
+        <file>resources/Limites/e.svg</file>
+        <file>resources/Limites/e-2.svg</file>
+        <file>resources/Limites/e-3.svg</file>
+        <file>resources/Limites/ln-1.svg</file>
+        <file>resources/Limites/ln-2.svg</file>
+        <file>resources/Limites/sen-notable.svg</file>
+        <file>resources/Trigonometria/cos-doble.svg</file>
+        <file>resources/Trigonometria/cos-suma.svg</file>
+        <file>resources/Trigonometria/cot.svg</file>
+        <file>resources/Trigonometria/csc.svg</file>
+        <file>resources/Trigonometria/Pitagorica.svg</file>
+        <file>resources/Trigonometria/Pitagorica2.svg</file>
+        <file>resources/Trigonometria/Pitagorica3.svg</file>
+        <file>resources/Trigonometria/sec.svg</file>
+        <file>resources/Trigonometria/sen-doble.svg</file>
+        <file>resources/Trigonometria/sen-suma.svg</file>
+        <file>resources/Trigonometria/Tan.svg</file>
+        <file>resources/Trigonometria/tan-doble.svg</file>
+        <file>resources/Trigonometria/tan-suma.svg</file>
+    </qresource>
+</RCC>

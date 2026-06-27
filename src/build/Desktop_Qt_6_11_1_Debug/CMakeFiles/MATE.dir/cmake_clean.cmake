@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/MATE_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/MATE_autogen.dir/ParseCache.txt"
+  "MATE_autogen"
+  "CMakeFiles/MATE.dir/MATE_autogen/EWIEGA46WW/qrc_Font.cpp.o"
+  "CMakeFiles/MATE.dir/MATE_autogen/EWIEGA46WW/qrc_Font.cpp.o.d"
+  "CMakeFiles/MATE.dir/MATE_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/MATE.dir/MATE_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/MATE.dir/calc.cpp.o"
+  "CMakeFiles/MATE.dir/calc.cpp.o.d"
+  "CMakeFiles/MATE.dir/formulario.cpp.o"
+  "CMakeFiles/MATE.dir/formulario.cpp.o.d"
+  "CMakeFiles/MATE.dir/game/funcion.cpp.o"
+  "CMakeFiles/MATE.dir/game/funcion.cpp.o.d"
+  "CMakeFiles/MATE.dir/game/nivel.cpp.o"
+  "CMakeFiles/MATE.dir/game/nivel.cpp.o.d"
+  "CMakeFiles/MATE.dir/game/niveles.cpp.o"
+  "CMakeFiles/MATE.dir/game/niveles.cpp.o.d"
+  "CMakeFiles/MATE.dir/game/plano.cpp.o"
+  "CMakeFiles/MATE.dir/game/plano.cpp.o.d"
+  "CMakeFiles/MATE.dir/game/quiz.cpp.o"
+  "CMakeFiles/MATE.dir/game/quiz.cpp.o.d"
+  "CMakeFiles/MATE.dir/game/ventanajuego.cpp.o"
+  "CMakeFiles/MATE.dir/game/ventanajuego.cpp.o.d"
+  "CMakeFiles/MATE.dir/graficadorawindow.cpp.o"
+  "CMakeFiles/MATE.dir/graficadorawindow.cpp.o.d"
+  "CMakeFiles/MATE.dir/main.cpp.o"
+  "CMakeFiles/MATE.dir/main.cpp.o.d"
+  "CMakeFiles/MATE.dir/mainw.cpp.o"
+  "CMakeFiles/MATE.dir/mainw.cpp.o.d"
+  "MATE"
+  "MATE.pdb"
+  "MATE_autogen/EWIEGA46WW/qrc_Font.cpp"
+  "MATE_autogen/mocs_compilation.cpp"
+  "MATE_autogen/timestamp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/MATE.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
