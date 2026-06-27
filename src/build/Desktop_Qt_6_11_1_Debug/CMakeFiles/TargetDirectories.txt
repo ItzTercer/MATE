@@ -1,0 +1,9 @@
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/MATE.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/edit_cache.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/rebuild_cache.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/list_install_components.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/install.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/install/local.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/install/strip.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/MATE_autogen_timestamp_deps.dir
+/home/diamir/Escritorio/Copymate/src/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/MATE_autogen.dir
